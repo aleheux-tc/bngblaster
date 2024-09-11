@@ -3041,14 +3041,14 @@ decode_dhcp(uint8_t *buf, uint16_t len,
                 if(option_len != 4) {
                     return DECODE_ERROR;
                 }
-                dhcp->t1 = *(uint32_t*)buf;
+                dhcp->t1 = be32toh(*(uint32_t*)buf);
                 dhcp->option_t1 = true;
                 break;
             case DHCP_OPTION_REBINDING_TIME_VALUE:
                 if(option_len != 4) {
                     return DECODE_ERROR;
                 }
-                dhcp->t2 = *(uint32_t*)buf;
+                dhcp->t2 = be32toh(*(uint32_t*)buf);
                 dhcp->option_t2 = true;
                 break;
             default:
