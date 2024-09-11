@@ -942,7 +942,7 @@ typedef struct bbl_dhcp_ {
     uint32_t     router;
     uint16_t     mtu;
     uint32_t     t1;
-    uint32_t.    t2;
+    uint32_t     t2;
     char        *host_name;
     uint8_t      host_name_len;
     char        *domain_name;
