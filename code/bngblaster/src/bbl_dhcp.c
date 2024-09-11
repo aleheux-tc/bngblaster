@@ -255,12 +255,12 @@ bbl_dhcp_rx(bbl_session_s *session, bbl_ethernet_header_s *eth, bbl_dhcp_s *dhcp
                     strncpy(session->dhcp_domain_name, dhcp->domain_name, dhcp->domain_name_len);
                 }
                 if (dhcp->option_t1) {
-                    session->t1 = dhcp->t1;
+                    session->dhcp_t1 = dhcp->t1;
                 } else {
                     session->dhcp_t1 = 0.5 * session->dhcp_lease_time; if(!session->dhcp_t1) session->dhcp_t1 = 1;
                 }
                 if (dhcp->option_t2) {
-                    session->t2 = dhcp->t2;
+                    session->dhcp_t2 = dhcp->t2;
                 } else {
                     session->dhcp_t2 = 0.875 * session->dhcp_lease_time; if(!session->dhcp_t2) session->dhcp_t2 = 1;
                 }
