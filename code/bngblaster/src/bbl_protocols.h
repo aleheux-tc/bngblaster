@@ -960,7 +960,7 @@ typedef struct bbl_dhcp_ {
     bool         option_host_name;
     bool         option_domain_name;
     bool         option_t1;
-    bool.        option_t2;
+    bool         option_t2;
 
     access_line_s *access_line;
     uint8_t *client_identifier;
